@@ -14,28 +14,33 @@ const Tarefa = ({ tarefa, onToggle, indice }) => {
     const diasRestantes = calcularDiasRestantes();
 
     const definirCorDeFundo = () => {
-      if (tarefa.concluida) return 'green';
-      if (diasRestantes < 0) return 'red';
-      return 'blue';
+      if (tarefa.concluida) return '#CCFFD5';
+      if (diasRestantes < 0) return '#FFCCCC';
+      return '#FFEBCC';
+    };
+
+    const definirCorDeBorda = () => {
+      if (tarefa.concluida) return '2px solid #80FFAB';
+      if (diasRestantes < 0) return '2px solid #FF8080';
+      return '2px solid #FFD580';
     };
 
     const divtarefaCriada = {
       padding: '10px',
-      border: '1px solid green',
+      border: definirCorDeBorda(),
       backgroundColor: definirCorDeFundo(),
       marginBottom: '5px',
       borderRadius: '5px',
       cursor: 'pointer',
-      wordWrap: 'break-word',
-      maxWidth: '20%'
+      wordWrap: 'break-word'
     };
 
     return (
-      <div style={divtarefaCriada} onClick={() => onToggle(indice)}>
-        <span style={{ textDecoration: tarefa.concluida ? 'line-through' : 'none' }}>
+      <div className='cardTarefa' style={divtarefaCriada} onClick={() => onToggle(indice)}>
+        <span className='tituloCard' style={{ textDecoration: tarefa.concluida ? 'line-through' : 'none' }}>
           {tarefa.texto}
         </span>
-        <div>
+        <div className='dataCriacao'>
           Data de Criação: {tarefa.dataCriacao}
         </div>
         <div>

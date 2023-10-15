@@ -1,12 +1,22 @@
-/* Tarefa.css */
-.caixa {
-    width: 100px;
-    height: 100px;
-    background-color: blue;
-    position: relative;
-    transition: transform 1s ease-in-out;
+ul{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.caixa-desaparecer {
-    transform: translateX(100%);
+.dataCriacao{
+    padding-top: 10px;
+}
+
+.cardTarefa{
+    display: flex;
+    align-items:normal;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tituloCard{
+    font-weight: bold;
 }

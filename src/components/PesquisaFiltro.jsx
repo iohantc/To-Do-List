@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/PesquisaFiltro.css'
 
 // Pesquisa e Filtragem
 const PesquisaFiltro = ({ tarefas, setTarefasFiltradas }) => {
@@ -16,8 +17,9 @@ const PesquisaFiltro = ({ tarefas, setTarefasFiltradas }) => {
   };
 
   return (
-    <div>
+    <div className='pesquisa'>
       <input
+      className='inputTexto'
         type='text' 
         placeholder='Pesquisar tarefas...'
         value={termoPesquisa} 

@@ -1,11 +1,13 @@
 import React from 'react';
-import ListaDeTarefas from './ListaTarefas';
+import ListaTarefas from './ListaTarefas';
+import '../styles/TarefasConcluidasPg.css'
 
 function TarefasConcluidas({ tarefas, onToggle }) {
   const tarefasConcluidas = tarefas.filter(tarefa => tarefa.concluida);
   return (
-    <div>
-      <ListaDeTarefas tarefas={tarefasConcluidas} onToggle={onToggle} />
+    <div className='concluidas'>
+      <h2>Tarefas concluídas 🎉</h2>
+      <ListaTarefas tarefas={tarefasConcluidas} onToggle={onToggle} />
     </div>
   );
 }

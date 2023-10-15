@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Route, Routes, Navigate, Link } from 'react-ro
 import AdicionarTarefaPg from './components/AdicionarTarefaPg';
 import VisualizarTarefasPg from './components/VisualizarTarefasPg';
 import TarefasConcluidasPg from './components/TarefasConcluidasPg';
+import './styles/NavBar.css'
+import './styles/App.css'
+
 
 // Barra de navegação
 function NavBar() {
@@ -14,6 +17,7 @@ function NavBar() {
     </nav>
   );
 }
+
 
 
 function App() {
@@ -62,15 +66,19 @@ function App() {
   // Campos de entrada, botões e renderização
   return (
     <Router>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<Navigate to="/adicionar" />} />
-        <Route path="/adicionar" element={<AdicionarTarefaPg textoTarefa={textoTarefa} setTextoTarefa={setTextoTarefa} dataLimite={dataLimite} setDataLimite={setDataLimite} adicionarTarefa={adicionarTarefa} />} />
-        <Route path="/visualizar" element={<VisualizarTarefasPg tarefas={tarefas} setTarefasFiltradas={setTarefasFiltradas} tarefasFiltradas={tarefasFiltradas} onToggle={alternarTarefa} />} />
-        <Route path="/concluidas" element={<TarefasConcluidasPg tarefas={tarefas} onToggle={alternarTarefa} />} />
-      </Routes>
+        <div className='conteudo' style={{ display: 'flex' }}>
+            <NavBar />
+            <div className="main-content">
+                <Routes>
+                    <Route path="/" element={<Navigate to="/adicionar" />} />
+                    <Route path="/adicionar" element={<AdicionarTarefaPg textoTarefa={textoTarefa} setTextoTarefa={setTextoTarefa} dataLimite={dataLimite} setDataLimite={setDataLimite} adicionarTarefa={adicionarTarefa} />} />
+                    <Route path="/visualizar" element={<VisualizarTarefasPg tarefas={tarefas} setTarefasFiltradas={setTarefasFiltradas} tarefasFiltradas={tarefasFiltradas} onToggle={alternarTarefa} />} />
+                    <Route path="/concluidas" element={<TarefasConcluidasPg tarefas={tarefas} onToggle={alternarTarefa} />} />
+                </Routes>
+            </div>
+        </div>
     </Router>
-  );
+);
 }
 
 export default App; 

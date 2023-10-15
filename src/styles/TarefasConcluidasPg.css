@@ -1,0 +1,18 @@
+h2 {
+    color:#24292e;
+    text-align: center;  /* Centraliza o texto horizontalmente */
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    width: 100%;  /* Define a largura para 100% para que text-align funcione corretamente */
+    padding: 4px;
+    margin-top: 3%;
+}
+
+.concluidas {
+    display: flex;  /* Define o display para flex */
+    flex-direction: column;  /* Define a direção do flex para coluna */
+    align-items: center;  /* Centraliza os itens horizontalmente */
+    justify-content: center;  /* Centraliza os itens verticalmente */
+    height: 100vh;  /* Ocupa toda a altura da tela */
+}

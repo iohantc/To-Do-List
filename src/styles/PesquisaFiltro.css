@@ -1,0 +1,12 @@
+.inputTexto{
+    padding: 6%;
+    width: 90%;
+}
+
+.pesquisa{
+    position: absolute;
+    top: 0;
+    width: 30%;
+    padding: 4px;
+    margin-top: 3%;
+}
