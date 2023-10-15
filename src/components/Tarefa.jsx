@@ -2,18 +2,17 @@ import React from 'react';
 
 const Tarefa = ({ tarefa, onToggle, index }) => {
 
-    // Calculando dias restantes
+    // Calcula dias restantes
     const calcularDiasRestantes = () => {
       const hoje = new Date().getTime();
       const dataLimite = new Date(tarefa.dataLimite).getTime();
-      const diferencaEmMilissegundos = dataLimite - hoje;
-      const dias = Math.ceil(diferencaEmMilissegundos / (1000 * 60 * 60 * 24));
+      const difMs = dataLimite - hoje; // Diferença em milisengundos
+      const dias = Math.ceil(difMs / (1000 * 60 * 60 * 24));
       return dias;
     };
 
     const diasRestantes = calcularDiasRestantes();
 
-    // Determinar a cor do background
     const definirCorDeFundo = () => {
       if (tarefa.concluida) return 'green';
       if (diasRestantes < 0) return 'red';

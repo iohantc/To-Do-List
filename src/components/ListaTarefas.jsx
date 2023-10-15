@@ -1,14 +1,16 @@
 import React from 'react';
-import Tarefa from './Tarefa';
+import Tarefa from './Tarefa'; 
 
-function ListaDeTarefas({ tarefas, onToggle }) {
+// mapeia cada tarefa para um componente Tarefa
+// Cada Tarefa recebe uma chave única, a tarefa em si, uma função para alternar seu estado e o índice
+function ListaTarefas({ tarefas, onToggle }) {
   return (
     <ul>
-      {tarefas.map((tarefa, index) => (
-        <Tarefa key={index} tarefa={tarefa} onToggle={onToggle} index={index} />
+      {tarefas.map((tarefa, indice) => (
+        <Tarefa key={indice} tarefa={tarefa} onToggle={onToggle} indice={indice} />
       ))}
     </ul>
   );
 }
 
-export default ListaDeTarefas;
+export default ListaTarefas; 
