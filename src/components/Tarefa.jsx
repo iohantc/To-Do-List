@@ -1,6 +1,6 @@
 import React from 'react';
-
-const Tarefa = ({ tarefa, onToggle, index }) => {
+import '../styles/Tarefa.css'
+const Tarefa = ({ tarefa, onToggle, indice }) => {
 
     // Calcula dias restantes
     const calcularDiasRestantes = () => {
@@ -31,7 +31,7 @@ const Tarefa = ({ tarefa, onToggle, index }) => {
     };
 
     return (
-      <div style={divtarefaCriada} onClick={() => onToggle(index)}>
+      <div style={divtarefaCriada} onClick={() => onToggle(indice)}>
         <span style={{ textDecoration: tarefa.concluida ? 'line-through' : 'none' }}>
           {tarefa.texto}
         </span>

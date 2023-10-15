@@ -1,7 +1,20 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import ListaDeTarefas from './components/ListaTarefas';
-import PesquisaFiltro from './components/PesquisaFiltro'; 
+import { BrowserRouter as Router, Route, Routes, Navigate, Link } from 'react-router-dom';
+import AdicionarTarefaPg from './components/AdicionarTarefaPg';
+import VisualizarTarefasPg from './components/VisualizarTarefasPg';
+import TarefasConcluidasPg from './components/TarefasConcluidasPg';
+
+// Barra de navegação
+function NavBar() {
+  return (
+    <nav>
+      <Link to="/adicionar">Adicionar Tarefa</Link> | {/* Link para a página de adicionar tarefas */}
+      <Link to="/visualizar">Visualizar Tarefas</Link> | {/* Link para a página de visualizar tarefas */}
+      <Link to="/concluidas">Tarefas Concluídas</Link> {/* Link para a página de tarefas concluídas */}
+    </nav>
+  );
+}
+
 
 function App() {
   // armazena as tarefas
@@ -32,15 +45,15 @@ function App() {
   };
 
   // alternar a conclusão de uma tarefa
-  const alternarTarefa = index => {
+  const alternarTarefa = indice => {
     const novasTarefas = [...tarefas];
-    novasTarefas[index].concluida = !novasTarefas[index].concluida;
-    if (novasTarefas[index].concluida) {
+    novasTarefas[indice].concluida = !novasTarefas[indice].concluida;
+    if (novasTarefas[indice].concluida) {
       // Atualizaa data de conclusão se concluída
-      novasTarefas[index].dataConclusao = new Date().toISOString().split('T')[0];
+      novasTarefas[indice].dataConclusao = new Date().toISOString().split('T')[0];
     } else {
       // Reseta a data de conclusão se não concluída
-      novasTarefas[index].dataConclusao = null;
+      novasTarefas[indice].dataConclusao = null;
     }
     // atualiza a lista de tarefas
     setTarefas(novasTarefas);
@@ -49,24 +62,12 @@ function App() {
   // Campos de entrada, botões e renderização
   return (
     <Router>
+      <NavBar />
       <Routes>
-        <Route path='/' element={
-          <>
-            <PesquisaFiltro tarefas={tarefas} setTarefasFiltradas={setTarefasFiltradas} />
-            <input
-              type='text'
-              value={textoTarefa}
-              onChange={e => setTextoTarefa(e.target.value)}
-            />
-            <input
-              type='date'
-              value={dataLimite}
-              onChange={e => setDataLimite(e.target.value)}
-            />
-            <button onClick={adicionarTarefa}>Adicionar Tarefa</button>
-            <ListaDeTarefas tarefas={tarefasFiltradas.length > 0 ? tarefasFiltradas : tarefas} onToggle={alternarTarefa} />
-          </>
-        } />
+        <Route path="/" element={<Navigate to="/adicionar" />} />
+        <Route path="/adicionar" element={<AdicionarTarefaPg textoTarefa={textoTarefa} setTextoTarefa={setTextoTarefa} dataLimite={dataLimite} setDataLimite={setDataLimite} adicionarTarefa={adicionarTarefa} />} />
+        <Route path="/visualizar" element={<VisualizarTarefasPg tarefas={tarefas} setTarefasFiltradas={setTarefasFiltradas} tarefasFiltradas={tarefasFiltradas} onToggle={alternarTarefa} />} />
+        <Route path="/concluidas" element={<TarefasConcluidasPg tarefas={tarefas} onToggle={alternarTarefa} />} />
       </Routes>
     </Router>
   );

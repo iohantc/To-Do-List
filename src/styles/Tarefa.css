@@ -1,0 +1,12 @@
+/* Tarefa.css */
+.caixa {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: relative;
+    transition: transform 1s ease-in-out;
+}
+
+.caixa-desaparecer {
+    transform: translateX(100%);
+}
