@@ -12,21 +12,21 @@ const PesquisaFiltro = ({ tarefas, setTarefasFiltradas }) => {
 
     // realiza o filtro das tarefas
     const tarefasFiltradas = tarefas.filter(tarefa => tarefa.texto.toLowerCase().includes(e.target.value.toLowerCase()));
-    
+
     setTarefasFiltradas(tarefasFiltradas);
   };
 
   return (
     <div className='pesquisa'>
       <input
-      className='inputTexto'
-        type='text' 
+        className='inputTexto'
+        type='text'
         placeholder='Pesquisar tarefas...'
-        value={termoPesquisa} 
-        onChange={pesquisa} 
+        value={termoPesquisa}
+        onChange={pesquisa}
       />
     </div>
   );
 };
 
-export default PesquisaFiltro;  // Exporta o componente para ser usado em outros lugares
+export default PesquisaFiltro;

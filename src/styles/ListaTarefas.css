@@ -1,7 +1,7 @@
 .listaTarefas {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    padding: 20px;
-    margin-top: 60px;  /* Ajuste para evitar sobreposição com a barra de pesquisa */
-  }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 20px;
+  margin-top: 60px;
+}

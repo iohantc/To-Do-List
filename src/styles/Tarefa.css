@@ -1,4 +1,4 @@
-ul{
+ul {
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -6,17 +6,25 @@ ul{
     grid-template-columns: repeat(3, 1fr);
 }
 
-.dataCriacao{
+.dataCriacao {
     padding-top: 10px;
 }
 
-.cardTarefa{
+.cardTarefa {
     display: flex;
-    align-items:normal;
+    align-items: normal;
     justify-content: center;
     flex-direction: column;
+    position: relative;
 }
 
-.tituloCard{
+.tituloCard {
     font-weight: bold;
+}
+
+.icon-edit {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
 }
