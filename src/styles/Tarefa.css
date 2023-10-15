@@ -1,3 +1,4 @@
+/* Define um layout de grid para a lista, com três colunas de tamanhos iguais, centralizando os itens */
 ul {
     width: 100%;
     align-items: center;
@@ -6,10 +7,12 @@ ul {
     grid-template-columns: repeat(3, 1fr);
 }
 
+/* Adiciona um padding superior para o elemento que mostra a data de criação */
 .dataCriacao {
     padding-top: 10px;
 }
 
+/* Define o estilo para o card de tarefa, organizando o conteúdo em uma coluna e posicionando relativamente */
 .cardTarefa {
     display: flex;
     align-items: normal;
@@ -18,10 +21,12 @@ ul {
     position: relative;
 }
 
+/* Define a fonte do título do card como bold (negrito) */
 .tituloCard {
     font-weight: bold;
 }
 
+/* Posiciona o ícone de edição no canto superior direito do card e altera o cursor para um ponteiro ao passar o mouse */
 .icon-edit {
     position: absolute;
     top: 10px;

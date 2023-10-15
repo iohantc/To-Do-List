@@ -1,3 +1,4 @@
+/* Define o estilo para os cabeçalhos h2, especificando a cor, alinhamento do texto, tamanho da fonte, posição, largura, padding e margem superior */
 h2 {
     color: #24292e;
     text-align: center;
@@ -9,6 +10,7 @@ h2 {
     margin-top: 3%;
 }
 
+/* Estiliza o contêiner das tarefas concluídas para exibição em uma coluna centralizada vertical e horizontalmente */
 .concluidas {
     display: flex;
     flex-direction: column;

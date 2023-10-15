@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/PesquisaFiltro.css'
 
-// Pesquisa e Filtragem
 const PesquisaFiltro = ({ tarefas, setTarefasFiltradas }) => {
   // armazena o termo de pesquisa
   const [termoPesquisa, setTermoPesquisa] = useState('');

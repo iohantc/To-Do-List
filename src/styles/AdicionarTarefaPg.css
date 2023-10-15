@@ -1,9 +1,11 @@
+/* Define o estilo básico do elemento body, definindo a largura, altura e margem para 0 */
 body {
     width: 100%;
     height: 100%;
     margin: 0;
 }
 
+/* Define o estilo do cabeçalho h1 com a cor de texto, tamanho da fonte e posição */
 h1 {
     color: #24292e;
     font-size: 50px;
@@ -13,6 +15,7 @@ h1 {
     margin-top: 3%;
 }
 
+/* Define o estilo do container .adicionarTarefa para centralizar os elementos dentro, definindo margem, padding e direção do flex */
 .adicionarTarefa {
     margin-top: 0%;
     padding-top: 0%;
@@ -24,15 +27,18 @@ h1 {
     height: 25%;
 }
 
+/* Define a margem inferior para todos os elementos input */
 input {
     margin-bottom: 10%;
 }
 
+/* Define o estilo para o campo de entrada de texto com padding e largura */
 .inputTexto {
     padding: 7%;
     width: 100%;
 }
 
+/* Define o estilo do botão com padding, borda, cor, background e efeito de transição para hover */
 button {
     display: inline-block;
     outline: 0;
@@ -52,6 +58,7 @@ button {
     transition-property: color, background-color, border-color;
 }
 
+/* Define o estilo do botão ao passar o mouse, alterando a cor, background e border-color */
 button:hover {
     color: #ffffff;
     background-color: #4188dadc;
@@ -60,6 +67,7 @@ button:hover {
     transition-duration: 0.1s;
 }
 
+/* Define o estilo básico para os elementos input com padding, largura, tamanho da fonte, cor, background e efeitos de transição */
 input {
     padding: 8px 12px;
     width: 100%;
@@ -76,12 +84,14 @@ input {
     margin-bottom: 16px;
 }
 
+/* Define o estilo para o input ao receber foco, removendo o contorno e definindo a cor da borda e sombra */
 input {
     outline: none;
     border-color: #0366d6;
     box-shadow: rgba(27, 31, 35, 0.1) 0px 1px 0px 0px, rgba(255, 255, 255, 0.03) 0px 1px 0px 0px inset;
 }
 
+/* Define o estilo para o campo de entrada de data com padding */
 .inputData {
     padding: 7px 10px;
 }

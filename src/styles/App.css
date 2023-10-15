@@ -1,3 +1,4 @@
+/* Define o body geral para que todas as páginas sigam o mesmo padrão */
 body {
   width: 100%;
   height: 100%;
@@ -6,6 +7,7 @@ body {
   background-color: #f4f4f4;
 }
 
+/* Centraliza o conteúdo retornado pela função  */
 .conteudo {
   display: flex;
   align-items: center;
@@ -15,6 +17,7 @@ body {
   margin: 0;
 }
 
+/* Mais um container para centralização */
 .app-container {
   display: flex;
   justify-content: center;
@@ -22,6 +25,7 @@ body {
   height: 100vh;
 }
 
+/* outro container para garantir a centralização */
 .main-content {
   display: flex;
   align-items: center;

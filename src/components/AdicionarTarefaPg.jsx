@@ -1,7 +1,8 @@
 import React from 'react';
-import '../styles/AdicionarTarefaPg.css'
+import '../styles/AdicionarTarefaPg.css';
 
 function AdicionarTarefaPg({ textoTarefa, setTextoTarefa, dataLimite, setDataLimite, adicionarTarefa }) {
+  // Retorna JSX que será renderizado com cabeçalho, entradas e botão para adicionar tarefa
   return (
     <div className='adicionarTarefa'>
       <h1>To Do List 📝</h1>

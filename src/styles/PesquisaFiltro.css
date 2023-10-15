@@ -1,8 +1,10 @@
+/* Define o estilo para o campo de entrada de texto, com padding e largura específicos */
 .inputTexto {
     padding: 6%;
     width: 90%;
 }
 
+/* Define a posição e o estilo para a barra de pesquisa, posicionando-a no topo e especificando sua largura, padding e margem superior */
 .pesquisa {
     position: absolute;
     top: 0;

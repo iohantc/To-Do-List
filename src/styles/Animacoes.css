@@ -1,3 +1,5 @@
+/* Animações de entrada e saída do card da tela */
+
 .fade-enter {
   opacity: 1;
   transform: translateX(0);

@@ -1,3 +1,4 @@
+/* Define a estrutura da barra de navegação */
 nav {
     display: flex;
     flex-direction: column;
@@ -10,6 +11,7 @@ nav {
     padding-top: 2%;
 }
 
+/* Estiliza os links dentro da barra de navegação */
 nav a {
     text-decoration: none;
     color: white;
@@ -19,6 +21,7 @@ nav a {
     transition: background-color 0.3s;
 }
 
+/* Define o estilo de hover para os links, alterando a cor de fundo quando o mouse é passado sobre eles */
 nav a:hover {
     background-color: #4188dadc;
 }

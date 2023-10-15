@@ -1,3 +1,4 @@
+/* Define a forma de visualização das tarefas na tela. Com formato de grade e até 3 itens por linha. */
 .listaTarefas {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
